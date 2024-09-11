@@ -1,0 +1,549 @@
+@import url("./navFooter.css");
+
+.headerContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerText {
+  width: 680px;
+  margin: 30px;
+  font-size: 38px;
+  color: white;
+  text-align: center;
+}
+
+.left,
+.right,
+.leftChecked,
+.rightChecked {
+  display: inline-block;
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+}
+
+.left {
+  color:rgb(24, 65, 87);
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.leftChecked{
+  color: white;
+  background-color: rgb(24, 65, 87);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+
+
+.right {
+  color: rgb(24, 65, 87);
+  background-color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.rightChecked {
+  color: white;
+  background-color: rgb(24, 65, 87);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+label {
+  position: relative;
+  margin-left: 38px;
+}
+.leftBox,
+.rightBox {
+  display: none;
+}
+
+/* +代表相邻的元素 */
+/* ::after伪元素，使用伪元素，必须含有content属性，可以为'',但不可不写 */
+
+.leftBox:checked + a::before{
+  content: "";
+  display: inline-block;
+  background: url(../img/checkbox-checked.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -2px;
+  left:-30px;
+}
+
+.leftBox + a::before{
+  content: "";
+  display: inline-block;
+  background: url(../img/checkbox-blue.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -2px;
+  left:-30px;
+}
+
+.rightBox:checked + a::before {
+  content: "";
+  display: block;
+  background: url(../img/checkbox-checked.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -2px;
+  left:-30px;
+}
+
+.rightBox + a::before {
+  content: "";
+  display: block;
+  background: url(../img/checkbox-blue.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -2px;
+  left:-30px;
+}
+
+.leftBox:not(:checked) + a:hover::before,
+.rightBox:not(:checked) + a:hover::before{
+  content: "";
+  display: block;
+  background: url(../img/checkbox-checked-blue.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -2px;
+  left:-30px;
+}
+
+
+.discount {
+  font-size: 12px;
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #8a9bae;
+  position: relative;
+  top: 5px;
+  left: 120px;
+  z-index: 5;
+}
+
+.questionsPortion {
+  background-color: white;
+}
+
+.pricingPortion {
+  width: 100%;
+  background-color: white;
+}
+.price {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.priceFree,
+.priceStan,
+.pricePro,
+.priceBus,
+.priceEnter {
+  height: 670px;
+  text-align: center;
+  position: relative;
+  top: -90px;
+}
+
+.priceEnter {
+  color: white;
+  background-color: rgb(24, 65, 87);
+  border-radius: 5px;
+}
+
+.popular {
+  height: 30px;
+  line-height: 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  font-size: 13px;
+  background-color: rgb(24, 65, 87);
+}
+
+.pricePro {
+  top: -120px;
+}
+
+.priceFreeIntro,
+.priceStanIntro,
+.priceBusIntro,
+.priceProIntro,
+.priceEnterIntro {
+  width: 180px;
+  height: 260px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.priceIntroHeader,
+.priceTag {
+  font-size: 20px;
+}
+
+
+.priceTitle {
+  font-size: 14px;
+}
+
+.priceSmall {
+  color: #848484;
+}
+
+.priceFreeIntro,
+.priceStanIntro,
+.priceBusIntro {
+  background-color: #ebeff4;
+}
+
+.priceProIntro {
+  background-color: white;
+  box-shadow: 0px 5px 10px rgb(213, 213, 213);
+}
+
+.priceButton,
+.priceProButton,
+.priceEnterButton {
+  color: #848484;
+  line-height: 40px;
+  width: 170px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: rgba(217, 212, 212, 20%);
+}
+
+.priceProButton {
+  color: white;
+  background-color: rgb(24, 65, 87);
+}
+.priceEnterButton {
+  color: white;
+  background-color: #f47b21;
+}
+
+.priceButton:hover,
+.priceProButton:hover,
+.priceEnterButton:hover
+{ 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.priceTitle {
+  width: 200px;
+  height: 55px;
+}
+
+.priceText {
+  height: 350px;
+  padding-left: 15px;
+  margin-top: 25px;
+  text-align: left;
+  list-style-type: none;
+  line-height: 30px;
+  border-style: hidden;
+}
+
+.priceBorder {
+  border-color: #dde2e6;
+  border-left-style: solid;
+}
+
+.support {
+  width: 660px;
+  height: 180px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+}
+
+.support img {
+  width: 160px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.platinum {
+  width: 460px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.platinumHeader {
+  font-size: 20px;
+}
+.platinumText {
+  font-size: 16px;
+}
+
+.platinumButton {
+  width: 140px;
+  height: 40px;
+  color: white;
+  line-height: 40px;
+  background-color: #f47b21;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.happyCusContainer {
+  width: fit-content;
+  height: 140px;
+  margin: 0 auto;
+}
+
+.happyCustomer {
+  width: 1100px;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.happyText {
+  width: fit-content;
+}
+
+.happyCustomer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deloitte {
+  width: 100px;
+}
+.micro {
+  width: 100px;
+}
+
+.wb {
+  width: 60px;
+}
+
+.wawa {
+  width: 80px;
+}
+
+.sch {
+  width: 100px;
+}
+.eric {
+  width: 60px;
+}
+
+.offerPortion {
+  width: 100%;
+  background-color: #eef2f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.offerMapText {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 26px;
+}
+.offerMap {
+  width: 1000px;
+  height: 250px;
+  margin: 0 auto;
+  background-image: url(../img/world_map_vector_objects.svg);
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: center;
+  background-origin: content-box;
+}
+
+.offerFeatureTop {
+  border-top-style: dotted;
+  border-color: #dde2e6;
+}
+
+.offerFeature {
+  width: 1000px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.offerPlan {
+  width: 620px;
+  padding-left: 130px;
+}
+
+.offerPlanHeader {
+  width: fit-content;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.offerPlanText {
+  width: 500px;
+  line-height: 1.2;
+}
+
+.include {
+  width: 200px;
+  height: 80px;
+  padding: 18px;
+  padding-left: 50px;
+  border-left-color: #dde2e6;
+  border-left-style: dashed;
+  box-sizing: border-box;
+}
+
+.includeTag {
+  height: 25px;
+  width: 90px;
+  line-height: 25px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  background-color: #416376;
+  margin-bottom: 8px;
+}
+
+.includePlan {
+  width: 190px;
+}
+
+.questionsPortion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.promoHeader {
+  width: fit-content;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.questions {
+  margin: 0 auto;
+  width: 1100px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 130px;
+}
+.quesContainer {
+  width: 550px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.quesTitle {
+  font-size: 18px;
+  color: #949494;
+  margin-bottom: 18px;
+}
+
+
+.ques li{
+  width: 500px;
+  margin-bottom: 5px;
+  border-bottom-style: solid;
+  border-color: #dde2e6;
+  position: relative;
+  list-style-type: none;
+}
+.ques div{
+  padding-bottom: 6px;
+}
+
+a.add::after{
+  content: "";
+  display: inline-block;
+  background: url(../img/add.svg);
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right:2px;
+  top:1px;
+}
+
+a.add:hover:after{
+  content: "";
+  display: inline-block;
+  background: url(../img/add-after.svg);
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right:2px;
+  top:1px;
+}
+
+
+a.minus::after{
+  content: "";
+  display: inline-block;
+  background: url(../img/add-minus.svg);
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right:2px;
+  top:1px;
+}
+
+.quesTextDisplay{
+  width:fit-content;
+  height:fit-content;
+  padding: 20px 15px;
+  line-height: 1.5;
+  background-color: #ebeff4;
+  font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+}
+
+.quesTextHidden{
+  display: none;
+}
+
