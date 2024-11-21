@@ -90,6 +90,7 @@ body {
   width: 100%;
   padding: 30px;
   background-color: #eef2f5;
+  box-sizing: border-box;
 }
 .signUp {
   width: 100%;
