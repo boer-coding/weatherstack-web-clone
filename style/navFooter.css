@@ -121,13 +121,14 @@ body {
 }
 
 .footerUpper {
-  width: 1400px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
   padding-top: 50px;
   margin-bottom: 50px;
+  box-sizing: border-box;
 }
 
 .footerLogo {
@@ -160,7 +161,7 @@ body {
   text-decoration: underline;
 }
 .footerLower {
-  width: 1400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -168,14 +169,14 @@ body {
   margin: 0 auto;
 }
 .footerLowerLink {
-  width: 1400px;
+  width: 100%;
 }
 
 .footerLowerLink a:hover{
   text-decoration: underline;
 }
 .footerLowerRights {
-  width: 1400px;
+  width: 100%;
   font-size: 12px;
   margin-bottom: 50px;
 }
